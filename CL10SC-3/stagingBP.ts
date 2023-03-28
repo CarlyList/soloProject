@@ -14,10 +14,10 @@ export class stagingBP extends BasePage {
     nameEntry: By = By.xpath('(//input[@id="product_name"])')
     pickCat: By = By.xpath('//a[text()="Pick Category"]')
     catSelection: By = By.xpath('(//a[@class="btn btn-xs btn-default pull-right"])[1]')
-    dept: By = By.xpath('(//span[@class="select2-selection__arrow"])')
-
-    costEntry: By = By.xpath('(//span[@class="form-control w90 ui-spinner-input price-input"])[0]')
-    PriceEntry: By = By.xpath('(//span[@class="form-control w90 ui-spinner-input price-input"])[1]')
+    dept: By = By.xpath('(//span[@role="presentation"])')
+    deptselection: By = By.xpath('(//li[@class="select2-results__option"][1])')
+    costEntry: By = By.xpath('(//input[@class="form-control w90 ui-spinner-input cost-input"])')
+    PriceEntry: By = By.xpath('(//span[@class="ui-spinner ui-corner-all ui-widget ui-widget-content"])[1]')
     saveButton: By = By.xpath('(//input[@class="btn btn-sm btn-success saveSuccess"])')
 
     constructor() {

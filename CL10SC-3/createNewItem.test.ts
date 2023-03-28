@@ -1,7 +1,7 @@
 import {stagingBP} from './stagingBP'
 const staging = new stagingBP()
 
-describe ('Sign into staging using user account', () => {
+describe ('Creat a new item', () => {
     test('', async() =>{
         await staging.navigate()
         await staging.click(staging.userName)
@@ -17,14 +17,21 @@ describe ('Sign into staging using user account', () => {
         await staging.click(staging.upcGen)
         await staging.driver.sleep(3000)
         await staging.click(staging.nameEntry)
-        await staging.setInput(staging.nameEntry, "Test item #")
+        await staging.setInput(staging.nameEntry, "Test item #1")
         await staging.click(staging.pickCat)
         await staging.click(staging.catSelection)
-        
-      
+        await staging.click(staging.dept)
+        await staging.click(staging.deptselection)
+
+
+     /*   await staging.click(staging.costEntry)
         await staging.setInput(staging.costEntry, "1.00")
-       
-        await staging.setInput(staging.PriceEntry, "3.00")
+
+
+        await staging.click(staging.PriceEntry)
+        await staging.setInput(staging.PriceEntry, "3.00")*/
+
+
         await staging.click(staging.saveButton)
         
     })

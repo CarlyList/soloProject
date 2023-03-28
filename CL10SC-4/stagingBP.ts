@@ -10,9 +10,11 @@ export class stagingBP extends BasePage {
     pricebookMenu: By = By.xpath('(//span[@data-original-title="Pricebook"])')
     productsMenu: By = By.xpath('(//span[@data-original-title="Products"])')
     inactiveItemWizard: By = By.xpath('(//a[@id="inactiveItemWizard"])')
+
     selectdept: By = By.xpath('(//span[@id="select2-inactiveWizardDepartmentId-container"])')
-    selectDept1: By = By.xpath('(//span[@id="select2-inactiveWizardDepartmentId-container")')
-    selectdept3: By = By.xpath('(//span[@aria-activedescendant="select2-inactiveWizardDepartmentId-result-k20d-AVGy1a0mgKagmK4JkZqx"])')
+
+    selectdept1: By = By.xpath('(//li[text()= "1 - 01-CIGS FULL"])')
+    selectdept2: By = By.xpath('(//[@)')
     runEval: By = By.xpath('(//a[@class="btn btn-xs btn-info"])')
     constructor() {
         super({url: "https://staging.goftx.com/"});
@@ -25,3 +27,6 @@ export class stagingBP extends BasePage {
 //title="1 - 01-CIGS FULL"
 //class="btn btn-xs btn-info"
 //class="select2-selection select2-selection--single"
+
+//selectdept: By = By.xpath('(//span[@role="presentation"])')
+//selectDept1: By = By.xpath('(//li[@class="select2-results__option"[1])')

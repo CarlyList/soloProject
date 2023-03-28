@@ -1,7 +1,7 @@
 import {stagingBP} from './stagingBP'
 const staging = new stagingBP()
 
-describe ('Sign into staging using user account', () => {
+describe ('Run the inactive wizard tool', () => {
     test('', async() =>{
         await staging.navigate()
         await staging.click(staging.userName)
@@ -15,8 +15,8 @@ describe ('Sign into staging using user account', () => {
         await staging.click(staging.productsMenu)
         await staging.click(staging.inactiveItemWizard)
         await staging.click(staging.selectdept)
-        
-        await staging.click(staging.selectDept1)
+        await staging.click(staging.selectdept1)
+        await staging.click(staging.runEval)
      
     })
 }) 

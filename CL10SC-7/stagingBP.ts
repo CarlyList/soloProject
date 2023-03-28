@@ -16,7 +16,9 @@ export class stagingBP extends BasePage {
     filterSelection: By = By.xpath('(//span[@class="select2-selection__rendered"])')
     selectFilter: By = By.xpath('(//span[text() = "Filter by Category"])')
     manage: By = By.xpath('(//a[@id="manage-filters"])')
-    selectFilter2: By = By.xpath('(//a[@class="btn btn-xs btn-default pull-right"][0])')
+    selectFilter2: By = By.xpath('(//a[@class="btn btn-xs btn-default pull-right"][1])')
+    apply: By = By.xpath('(//button[@class="btn btn-success"])')
+    save: By = By.xpath('(//input[@class="btn btn-sm btn-success saveSuccess"])')
 
 
 
@@ -31,3 +33,5 @@ export class stagingBP extends BasePage {
 //class="btn btn-xs btn-default pull-right"
 //class="select2 select2-container select2-container--default select2-container--below select2-container--open"
 //By = By.xpath('(//span[@class="select2 select2-container select2-container--default select2-container--below select2-container--open"])')
+//await staging.driver.sleep(3000)
+//By = By.xpath('(//a[@class="btn btn-xs btn-default pull-right"])')
