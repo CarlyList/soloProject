@@ -1,0 +1,25 @@
+import {stagingBP} from './stagingBP'
+const staging = new stagingBP()
+
+describe ('Create New Inventory Definition', () => {
+    test('', async() =>{
+        await staging.navigate()
+        await staging.click(staging.userName)
+        await staging.setInput(staging.userName, "scandata@goftx.com")
+        await staging.click(staging.password)
+        await staging.setInput(staging.password, "FasTrax0!")
+        await staging.click(staging.signIn)
+        await staging.click(staging.hamMenu)
+        await staging.click(staging.posMenu)
+        await staging.click(staging.invMenu)
+        await staging.click(staging.invCount)
+        await staging.click(staging.inv_def)
+        await staging.driver.sleep(3000)
+        await staging.click(staging.addNewDef)
+        await staging.setInput(staging.nameEntry, "test")
+        await staging.click(staging.filterSelection)
+        await staging.click(staging.selectFilter)
+        await staging.click(staging.manage)
+        await staging.click(staging.selectFilter2)
+    })
+})
