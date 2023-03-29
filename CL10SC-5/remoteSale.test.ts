@@ -26,7 +26,10 @@ describe ('create remote sale', () => {
         await staging.driver.sleep(3000)
         await staging.click(staging.addProduct)
         await staging.click(staging.searchUPC)
-        await staging.setInput(staging.searchUPC, "123123")
+        await staging.setInput(staging.searchUPC, "123123\n")
+        await staging.driver.sleep(3000)
+        await staging.click(staging.save1)
+        await staging.click(staging.cancle)
         
 
     })

@@ -19,6 +19,7 @@ export class stagingBP extends BasePage {
     addProduct: By = By.xpath('(//a[@id="itemAddUpdateBtn"])')
     searchUPC: By = By.xpath('(//input[@id="product_upc"])')
     save1: By = By.xpath('(//button[@class="btn btn-info btn-sm"])')
+    cancle: By = By.xpath('(//a[@class="btn btn-sm btn-default"])')
     constructor() {
         super({url: "https://staging.goftx.com/"});
     }

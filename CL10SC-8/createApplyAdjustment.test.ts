@@ -1,7 +1,7 @@
 import {stagingBP} from './stagingBP'
 const staging = new stagingBP()
 
-describe ('Sign into staging using user account', () => {
+describe ('Create and apply an adjustment', () => {
     test('', async() =>{
         await staging.navigate()
         await staging.click(staging.userName)
@@ -12,5 +12,18 @@ describe ('Sign into staging using user account', () => {
         await staging.click(staging.hamMenu)
         await staging.click(staging.posMenu)
         await staging.click(staging.invMenu)
+        await staging.click(staging.adjustmentMenu)
+        await staging.click(staging.addNew)
+        await staging.click(staging.memo)
+        await staging.setInput(staging.memo, "This is a memo")
+        await staging.click(staging.locationDrop)
+        await staging.click(staging.locationSelect)
+        await staging.click(staging.adjustmentReason)
+        await staging.setInput(staging.adjustmentReason, "This is a reason")
+        await staging.click(staging.searchProduct1)
+        await staging.setInput(staging.searchProduct1, "123123\n")
+        await staging.driver.sleep(3000)
+        await staging.click(staging.add)
+        await staging.click(staging.applyAdjustment)
     })
 })
